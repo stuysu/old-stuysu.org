@@ -1895,15 +1895,15 @@
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #ED4933;
 		}
 
 		.icon.style2 {
-			color: #00f0ff;
+			color: #000;
 		}
 
 		.icon.style3 {
-			color: #76ddff;
+			color: #ED4933;
 		}
 
 /* Image */
@@ -2594,8 +2594,8 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c7ebe8;
+			background-color: #EEEEEE;
+			color: #FFF;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2750,7 +2750,7 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
+			background-color: #E6E6E6;
 			color: #d3d4e4;
 		}
 
@@ -3725,3 +3725,23 @@
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+/* Responsive iFrame */
+ 
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
