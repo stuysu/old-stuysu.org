@@ -13,6 +13,10 @@
 	@-ms-viewport {
 		width: device-width;
 	}
+/*Don't Fuck With This*/
+.nl {
+    text-decoration:none
+}
 
 /* Skel */
 
@@ -1426,7 +1430,6 @@
 				letter-spacing: 0.0375em;
 			}
 		}
-
 	a {
 		-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
