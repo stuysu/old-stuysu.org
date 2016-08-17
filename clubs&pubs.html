@@ -85,7 +85,7 @@
 							<h2>Clubs & Pubs</h2>
 							<p>Sifting through Stuyvesant's 100s of clubs is hard. Let us help out!</p>
 						</header>
-						<section class="wrapper style5">
+						<section class="wrapper style5" id="nav-transition">
 							<div class="inner">
                                 <center><h2>Trying to find a club?</h2></center>
                                 <hr>
@@ -179,6 +179,31 @@
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/init.js"></script>
-
+			<!-- turns navbar dark on scroll -->
+			<script>
+				$(window).scroll(
+					function() {    
+						var scroll = $(window).scrollTop();
+						var objectSelect = $("#nav-transition");
+						var toAdd = $("#navbar");
+						var toAdd2 = $("#dropdownee1");
+						var toAdd3 = $("#dropdownee2");
+						//var offset = objectSelect.offset();
+						if (objectSelect.length) {
+							var objectPosition = objectSelect.offset().top;
+						}
+						if (scroll >= objectPosition) {
+							toAdd.addClass("navbar-color");
+							toAdd2.addClass("navbar-color");
+							toAdd3.addClass("navbar-color");
+						}
+						if (scroll <= objectPosition) {
+				 			toAdd.removeClass("navbar-color");
+				 			toAdd2.removeClass("navbar-color");
+				 			toAdd3.removeClass("navbar-color");
+						}
+					}
+				); 
+			</script>
 	</body>
 </html>
