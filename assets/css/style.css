@@ -3105,7 +3105,7 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #2E3842;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3728,6 +3728,18 @@
 		background-color: #1d242a;
 	}
 
+	body.is-mobile.landing .pretty-af-navbar {
+		display: none;
+	}
+
+	body.is-mobile.landing #header {
+		display: block;
+	}
+
+	body.is-mobile.landing header.alt {
+		display: block;
+		background: #2E3842;
+	}
 /* Responsive iFrame */
  
 .responsive-iframe-container {
@@ -3829,4 +3841,12 @@
 
 .dropdowner:hover .dropdownee {
 	display: block;
+}
+
+#header {
+	display: none;
+}
+
+header.alt {
+	display: none;
 }
