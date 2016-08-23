@@ -3813,8 +3813,8 @@
 .dropdownee a {
 	display: block;
 	text-align: center;
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	color: #B0B0B0;
