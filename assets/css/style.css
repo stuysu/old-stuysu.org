@@ -37,6 +37,14 @@
 		line-height: 1;
 	}
 
+/*  === NEW CSS HERE ===  */
+    
+    
+
+/*  ====================  */
+
+
+
 	ol, ul {
 		list-style: none;
 
@@ -1411,6 +1419,7 @@
 		font-weight: 400;
 		letter-spacing: 0.075em;
 		line-height: 1.65em;
+        margin-bottom: 10px;
 	}
 
 		@media screen and (max-width: 1680px) {
