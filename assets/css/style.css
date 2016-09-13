@@ -39,7 +39,10 @@
 
 /*  === NEW CSS HERE ===  */
     
-    
+    .data {
+        white-space: pre-line;
+        color: #000;
+    }
 
 /*  ====================  */
 
@@ -2582,6 +2585,7 @@
 
 	.wrapper {
 		padding: 6em 0 4em 0;
+        word-break: break-all;
 	}
 
 		.wrapper > .inner {
