@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<!--
+    ALLLLOOOOO
+    Ares Aung
+    Matthew So
+    Tahseen Chowdhury
+    Kai :)
+-->
+<html>
+
+<head>
+    <title>Stuyvesant Student Union</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="assets/css/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie/v9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie/v8.css" /><![endif]-->
+</head>
+
+<body class="landing">
+    <script>
+        function escapeHTML(string) {
+            var pre = document.createElement('pre');
+            var text = document.createTextNode(string);
+            pre.appendChild(text);
+            return pre.innerHTML;
+        }
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1292281667451957',
+                xfbml: true,
+                version: 'v2.7'
+            });
+
+            FB.api('/201692260175914', {
+                fields: 'posts',
+                access_token: 'EAASXUsW8ZCDUBALcucPxdxXd0pIUWmwvwuOxJzvUH9qzBK574NEuQTQORAvmMwaEJJuBqHcZAIGwGSxZB0gtj5ZAW1TizuUhMpKpeUfz0Dmfv08uAs6OZBM8dhBh3tT3eKmkGFqV6Ey87MyYokDDjLloHvZBwqTRlMnrcCLqh0QAZDZD'
+            }, function(response) {
+
+                //console.log(response["posts"]["data"]);
+                var postsArray = response["posts"]["data"]
+                var threshold = Math.min(postsArray.length, 5)
+                var count = 0;
+
+                while (count < threshold) {
+                    var msg = response["posts"]["data"][count]["message"];
+                    //console.log(msg);
+                    if (msg != undefined) {
+                        document.getElementById("news").innerHTML += `
+                            <br><br><br><br>
+                            <div class='inner'>
+                            <div class='data'>
+                        ` + escapeHTML(msg) + "</div></div>";
+                        count++;
+                    }
+                }
+
+            });
+
+        };
+
+        (function(d, s, id) {
+            var js;
+            var fjs = d.getElementsByTagName(s)[0];
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/all.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Stuyvesant Student Union</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html"><h3>Student Union</h3></a></li>
+
+                                <li><a href="#"><h3>Information</h3></a></li>
+                                <li><a href="su-calendar.html">Calendar</a></li>
+                                <li><a href="assets/documents/Constitution.pdf">Constitution</a></li>
+                                <li><a href="su-contact.html">Contact Us</a></li>
+                                <li> <a href="https://goo.gl/forms/PTGP1ShAZWLF0bER2"> Task Force </a></li>
+
+                                <li><a href="http://academics.stuysu.org"><h3>Academics</h3></a></li>
+
+
+                                <li><a href="#"><h3>Caucuses</h3></a></li>
+                                <li><a href="http://freshman.stuysu.org/">Freshman Caucus</a></li>
+                                <li><a href="http://sophomore.stuysu.org/">Sophomore Caucus</a></li>
+                                <li><a href="http://junior.stuysu.org/">Junior Caucus</a></li>
+                                <li><a href="http://senior.stuysu.org/">Senior Caucus</a></li>
+
+                                <li><a href="clubs&pubs.html"><h3>Clubs & Pubs</h3></a></li>
+
+
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <ul id="navbar" class="pretty-af-navbar">
+            <div style="float: left">
+                <li>
+                    <a href="index.html"><img src="images/logo.png" style="height: 2em ; width: 2em ; vertical-align: middle"></img>
+                    </a>
+                </li>
+            </div>
+
+            <div style="float: right ; padding-right: 30px">
+                <li class="dropdowner">
+                    <a href="#" style="cursor: default">Information<img src="images/dropdown.png" style="height: 2em ; width: 2em ; vertical-align: middle"></img></a>
+                    <div id="dropdownee1" class="dropdownee">
+                        <a href="su-calendar.html">Calendar</a>
+                        <a href="assets/documents/Constitution.pdf">Constitution</a>
+                        <a href="su-contact.html">Contact Us</a>
+                        <a href="https://goo.gl/forms/PTGP1ShAZWLF0bER2"> Task Force </a>
+                    </div>
+                </li>
+
+                <li><a href="http://academics.stuysu.org/" target="_blank">Academics</a></li>
+
+                <li class="dropdowner">
+                    <a style="cursor: default">Caucuses<img src="images/dropdown.png" style="height: 2em ; width: 2em ; vertical-align: middle; text-align: left;"></img></a>
+                    <div id="dropdownee2" class="dropdownee">
+                        <a href="http://freshman.stuysu.org/">Freshman Caucus</a>
+                        <a href="http://sophomore.stuysu.org/">Sophomore Caucus</a>
+                        <a href="http://junior.stuysu.org/">Junior Caucus</a>
+                        <a href="http://senior.stuysu.org/">Senior Caucus</a>
+                    </div>
+                </li>
+                <li><a href="clubs&pubs.html">Clubs & Pubs</a></li>
+
+            </div>
+        </ul>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <h2>Stuyvesant Student Union</h2>
+                <p>Bridging The Gap</p>
+                <ul class="actions">
+                    <li><a href="su-contact.html" class="button special">Contact Us</a></li>
+                </ul>
+            </div>
+            <a href="#one" id="nav-transition" class="more scrolly">Latest News</a>
+        </section>
+
+        <!-- Main -->
+        <article id="main">
+            <section id="one" class="wrapper style5" id="nav-transition">
+                <div class="inner">
+                    <p id="news"></p>
+                </div>
+            </section>
+        </article>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="http://www.facebook.com/StuySU2015" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="mailto:StuyvesantStudentUnion2015@Gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuyvesant Student Union. All Rights Reserved</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/init.js"></script>
+    <!-- turns navbar dark on scroll -->
+    <script>
+        $(window).scroll(
+            function() {
+                var scroll = $(window).scrollTop();
+                var objectSelect = $("#nav-transition");
+                var toAdd = $("#navbar");
+                var toAdd2 = $("#dropdownee1");
+                var toAdd3 = $("#dropdownee2");
+                //var offset = objectSelect.offset();
+                if (objectSelect.length) {
+                    var objectPosition = objectSelect.offset().top;
+                }
+                if (scroll >= objectPosition) {
+                    toAdd.addClass("navbar-color");
+                    toAdd2.addClass("navbar-color");
+                    toAdd3.addClass("navbar-color");
+                }
+                if (scroll <= objectPosition) {
+                    toAdd.removeClass("navbar-color");
+                    toAdd2.removeClass("navbar-color");
+                    toAdd3.removeClass("navbar-color");
+                }
+            }
+        );
+    </script>
+    <!-- makes navbar clickable after the image shows up -->
+    <script>
+        setTimeout(
+            function() {
+                var objectSelect = $("#navbar");
+                objectSelect.addClass("nav-visible");
+            }, 2750);
+    </script>
+</body>
+
+</html>
