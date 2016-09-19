@@ -22,7 +22,11 @@
 </head>
 
 <body class="landing">
-
+    
+    <script src="assets/js/news.js">
+    </script>
+    
+    
     <!-- Page Wrapper -->
     <div id="page-wrapper">
 
@@ -110,15 +114,14 @@
             <a href="#one" id="nav-transition" class="more scrolly">Latest News</a>
         </section>
 
-        <!-- One -->
-        <section id="one" class="wrapper style1 special">
-            <div class="inner">
+        <!-- Main -->
+        <article id="main">
+            <section id="one" class="wrapper style5" id="nav-transition">
                 <div class="inner">
-                    <article class="feature left">
-                        <iframe src="http://stuysu2015.sitefly.co/news" style="border:0px #FFFFFF none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="1000px" width="100%"></iframe>
-                    </article>
+                    <p id="news"></p>
                 </div>
-        </section>
+            </section>
+        </article>
 
 
         <!-- Footer -->
@@ -132,48 +135,48 @@
             </ul>
         </footer>
 
-        </div>
+    </div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/skel.min.js"></script>
-        <script src="assets/js/init.js"></script>
-        <!-- turns navbar dark on scroll -->
-        <script>
-            $(window).scroll(
-                function() {
-                    var scroll = $(window).scrollTop();
-                    var objectSelect = $("#nav-transition");
-                    var toAdd = $("#navbar");
-                    var toAdd2 = $("#dropdownee1");
-                    var toAdd3 = $("#dropdownee2");
-                    //var offset = objectSelect.offset();
-                    if (objectSelect.length) {
-                        var objectPosition = objectSelect.offset().top;
-                    }
-                    if (scroll >= objectPosition) {
-                        toAdd.addClass("navbar-color");
-                        toAdd2.addClass("navbar-color");
-                        toAdd3.addClass("navbar-color");
-                    }
-                    if (scroll <= objectPosition) {
-                        toAdd.removeClass("navbar-color");
-                        toAdd2.removeClass("navbar-color");
-                        toAdd3.removeClass("navbar-color");
-                    }
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/init.js"></script>
+    <!-- turns navbar dark on scroll -->
+    <script>
+        $(window).scroll(
+            function() {
+                var scroll = $(window).scrollTop();
+                var objectSelect = $("#nav-transition");
+                var toAdd = $("#navbar");
+                var toAdd2 = $("#dropdownee1");
+                var toAdd3 = $("#dropdownee2");
+                //var offset = objectSelect.offset();
+                if (objectSelect.length) {
+                    var objectPosition = objectSelect.offset().top;
                 }
-            );
-        </script>
-        <!-- makes navbar clickable after the image shows up -->
-        <script>
-            setTimeout(
-                function() {
-                    var objectSelect = $("#navbar");
-                    objectSelect.addClass("nav-visible");
-                }, 2750);
-        </script>
+                if (scroll >= objectPosition) {
+                    toAdd.addClass("navbar-color");
+                    toAdd2.addClass("navbar-color");
+                    toAdd3.addClass("navbar-color");
+                }
+                if (scroll <= objectPosition) {
+                    toAdd.removeClass("navbar-color");
+                    toAdd2.removeClass("navbar-color");
+                    toAdd3.removeClass("navbar-color");
+                }
+            }
+        );
+    </script>
+    <!-- makes navbar clickable after the image shows up -->
+    <script>
+        setTimeout(
+            function() {
+                var objectSelect = $("#navbar");
+                objectSelect.addClass("nav-visible");
+            }, 2750);
+    </script>
 </body>
 
 </html>
