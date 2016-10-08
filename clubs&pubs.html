@@ -49,7 +49,14 @@
 			                                   <li><a href="http://sophomore.stuysu.org/">Sophomore Caucus</a></li>
 			                                   <li><a href="http://junior.stuysu.org/">Junior Caucus</a></li>
 			                                   <li><a href="http://senior.stuysu.org/">Senior Caucus</a></li>
-
+																	 <li class="dropdowner">
+																			 			<a style="cursor: default">Organizations<img src="images/dropdown.png" style="height: 2em ; width: 2em ; vertical-align: middle; text-align: middle;"></img></a>
+																			 			<div id="dropdownee3" class="dropdownee">
+																			 				<a href="http://stuybigsibs.com/">Big Sibs</a>
+																			 				<a href="http://www.stuyspec.com/">Spectator</a>
+																			 				<a href="https://stuyarista.org/index">ARISTA</a>
+																			 			</div>
+																			 	</li>
 			                             <li><a href="clubs&pubs.html"><h3>Clubs & Pubs</h3></a></li>
 
 
@@ -200,19 +207,22 @@
 						var toAdd = $("#navbar");
 						var toAdd2 = $("#dropdownee1");
 						var toAdd3 = $("#dropdownee2");
+						var toAdd4 = $("#dropdownee3");
 						//var offset = objectSelect.offset();
 						if (objectSelect.length) {
-							var objectPosition = objectSelect.offset().top;
+								var objectPosition = objectSelect.offset().top;
 						}
 						if (scroll >= objectPosition) {
-							toAdd.addClass("navbar-color");
-							toAdd2.addClass("navbar-color");
-							toAdd3.addClass("navbar-color");
+								toAdd.addClass("navbar-color");
+								toAdd2.addClass("navbar-color");
+								toAdd3.addClass("navbar-color");
+								toAdd4.addClass("navbar-color");
 						}
 						if (scroll <= objectPosition) {
-				 			toAdd.removeClass("navbar-color");
-				 			toAdd2.removeClass("navbar-color");
-				 			toAdd3.removeClass("navbar-color");
+								toAdd.removeClass("navbar-color");
+								toAdd2.removeClass("navbar-color");
+								toAdd3.removeClass("navbar-color");
+								toAdd4.removeClass("navbar-color");
 						}
 					}
 				);
