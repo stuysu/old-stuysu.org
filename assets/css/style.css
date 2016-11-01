@@ -2585,7 +2585,7 @@
 
 	.wrapper {
 		padding: 6em 0 4em 0;
-        word-break: break-all;
+        word-break: normal;
 	}
 
 		.wrapper > .inner {

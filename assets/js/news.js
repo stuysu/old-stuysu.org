@@ -11,33 +11,32 @@ window.fbAsyncInit = function () {
         xfbml: true,
         version: 'v2.7'
     });
-
-    FB.api('/731255060334426', {
-        fields: 'posts',
-        access_token: 'EAACzXMF1AMgBAHBKRVUf1CTMZA1z2V8K8uPpjZAoQaSwCjGhyvtlupR1PbcrKrXBPZCQbr30KJINDLoH7y9T8jfOwdZCOEol4BSEnMg4LkBry4ZC8IdsLybj0B8cw0ZBn7jEEPvKD1MNVJKfS45H1MRHEehQzS9tfZBCZCSgI7nZCZAkXHrIcfpla2'
-    }, function (response) {
-
-        //console.log(response["posts"]["data"]);
-        var postsArray = response["posts"]["data"]
-        var threshold = Math.min(postsArray.length, 5)
-        var count = 0;
-
-        while (count < threshold) {
-            var msg = response["posts"]["data"][count]["message"];
-            //console.log(msg);
-            if (msg != undefined) {
-                document.getElementById("news").innerHTML += `
-                            <br><br><br><br>
-                            <div class='inner'>
-                            <div class='data'>
-                        ` + escapeHTML(msg) + "</div></div>";
-                count++;
+    jQuery.get("/assets/js/page_token", function (data) {
+        FB.api('/201692260175914', {
+            fields: 'posts',
+            access_token: data
+        }, function (response) {
+            var postsArray = response["posts"]["data"]
+            var count = 0;
+            console.log(postsArray.length);
+            for (i = 0; i < postsArray.length; i++) {
+                var msg = response["posts"]["data"][count]["message"];
+                console.log(msg);
+                if (msg != undefined) {
+                    //sorry for cancerous hardcoded html
+                    document.getElementById("news").innerHTML += `
+                    <div style="white-space:pre-line; text-align:left">
+                        <img src="images/logo.jpg" width=10% style="display: block; margin: 0 auto;">
+                        <h2 style="text-align:center">Stuyvesant Student Union</h2>
+                        ` + escapeHTML(msg) + "<hr></div>";
+                    count++;
+                }
             }
-        }
-
-    });
-
+        });
+        return data;
+    })
 };
+
 
 (function (d, s, id) {
     var js;
